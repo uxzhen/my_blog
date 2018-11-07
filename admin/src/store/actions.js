@@ -1,4 +1,4 @@
-import request from "@/utils/request"
+// import request from "@/utils/request"
 const actions = {
     //登录方法
     //登录方法传递两个参数username，passworld

@@ -3,7 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+//将图标库引入
+import "@/assets/image/icon/iconfont"
+//将全局样式引入
+import "@/assets/style/index"
 Vue.config.productionTip = false
 import store from "@/store"
 /* eslint-disable no-new */
