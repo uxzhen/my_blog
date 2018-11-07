@@ -4,6 +4,7 @@ import bodyParser from "koa-bodyparser"
 //路由文件
 import router from './routes/index'
 
+import  query from "./utils/query"
 const app = new koa()
 
 app.use(cors())
