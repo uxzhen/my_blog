@@ -4,14 +4,32 @@
             <use xlink:href="#icon-liebiao"></use>
         </svg>
         <div>
-            sadsdasdas
+           
         </div>
     </div>
 </template>
 
 <script>
+import request from "@/utils/request"
 export default {
-    name:"Login"
+    name:"Login",
+    data(){
+        return{
+
+        }
+    },
+    methods:{
+
+    },
+    //当组件加载完毕的时候自动执行
+    mounted:function(){
+        request({
+            url:'/index',
+            method:"get"
+        }).then((res)=>{
+            console.log(res.data);
+        })
+    }
 }
 </script>
 

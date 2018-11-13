@@ -11,10 +11,6 @@ export default new Router({
       path: '/login',
       component:Login
     },
-    // {
-    //   path:'/',
-    //   redirect:"/Login"
-    // },
     {
       path:"/list",
       component:List
