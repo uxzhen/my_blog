@@ -9,7 +9,7 @@
                     无火的余灰
                 </h4>
             </section>
-            <a class="log-out" >
+            <a class="log-out" @click="logout">
                 <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-tuichu"></use>
                 </svg>
@@ -24,14 +24,26 @@
  * @author
  * @file 顶部公用导航栏组件
  * */
-
+import request from '@/utils/request'
+import { romoveToken } from "@/utils/auth"
 export default {
-    methods: {
-        logOut() {
-            
-        }
+     methods:{
+      logout(){
+        request({
+          url:'/logout',
+          method:'get'
+        }).then(res=>{
+          if(res.success == true){
+            this.$store.commit('SET_TOKEN','')
+            removeToken()
+            location.reload();//强制刷新一下当前页面，重新判断下是否具备权限.
+          }
+        }).catch(err=>{
+          console.log(err);
+        })
+      }
     }
-}
+  }	  
 </script>
 
 <style lang="scss" scoped>

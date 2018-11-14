@@ -1,7 +1,8 @@
 <template>
     <div class="login-container">
       <header class="login-head">
-        <span>lzy博客系统</span>
+        <span>lzy博客系统admin/1qaz@wsx
+</span>
         <img class="logo" src="../assets/image/logo.png">
       </header>
       <section class="form">
