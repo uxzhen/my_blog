@@ -16,7 +16,7 @@ import VeeValidate from 'vee-validate'
 import Notifications from 'vue-notification'
 Vue.use(VeeValidate)
 Vue.use(Notifications)
-
+import '@/permission'
 
 
 Vue.config.productionTip = false
