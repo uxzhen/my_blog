@@ -12,7 +12,7 @@
                     <input type="text" id="author" placeholder="输入作者...">
                     <section class="btn-container">
                         <button id="confirm" class="not-del" @click="confirmChange">确认</button>
-                        <button id="cancel" class="delete">取消</button>
+                        <button id="cancel" class="delete" @click="esec">取消</button>
                     </section>
                 </section>
             </div>
@@ -77,9 +77,9 @@ export default {
             url:"/read/getread",
             method:"post"
         }).then(res=>{
-                console.log(res)
+                // console.log(res)
                 this.books = res
-                console.log(this.books)
+                // console.log(this.books)
             }).catch(err=>{
                 console.log(err)
             })
@@ -114,11 +114,16 @@ export default {
                         }
                     }).then(res=>{
                         console.log(res)
+                        this.isDiaShow = false
                     }).catch(err=>{
                         console.log(err)
                     })
                 }
             }
+        },
+        esec(){
+            console.log(123123)
+            this.isDiaShow = false
         },
         addBook(){
             this.isDiaShow = true
