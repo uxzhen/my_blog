@@ -1,5 +1,5 @@
 //关于权限的一些方法
-import Cookies from 'js-cookie'//前后端都能用，操作cookie
+import Cookies from 'js-cookie'
 const TokenKey = 'Admin-Token'
 
 export function getToken(){
