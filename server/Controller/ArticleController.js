@@ -49,5 +49,11 @@ class ArticleController {
         // console.log(res)
         ctx.body = res
     }
+    async updateRead(ctx){
+        const { id,name,author,score } = await ctx.request.body
+        console.log( id,name,author,score)
+        const res = await Article.updateRead(id,name,author,score)
+        ctx.body = res
+    }
 }
 export default new ArticleController()

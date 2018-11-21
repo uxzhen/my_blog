@@ -64,7 +64,9 @@ export default {
             isDiaShow:false,
             isEditing:true,
             score:0,
-            books:[]
+            books:[],
+            editingId:'',
+            editingIndex:''
         }
     },
     components:{
@@ -114,15 +116,59 @@ export default {
                         }
                     }).then(res=>{
                         console.log(res)
+                        const id = res.insertId
+                            const book = {
+                                id,
+                                name,
+                                author,
+                                score
+                            }
+                            this.books.push(book)
                         this.isDiaShow = false
                     }).catch(err=>{
                         console.log(err)
                     })
+                }else{
+                    alert('请填写全部内容')
+                }
+            }else{
+                const name = document.getElementById('name').value
+                const author = document.querySelector('#author').value
+                const score = this.score
+                const id = this.editingId
+                if(name&&author){
+                    request({
+                        url:"/read/updateread",
+                        method:'post',
+                        data:{
+                            id,
+                            name,
+                            author,
+                            score
+                        }
+                    }).then(res=>{
+                        console.log(res)
+                        const id = res.insertId
+                            const book = {
+                                id,
+                                name,
+                                author,
+                                score
+                            }
+                        this.books.splice(this.editingIndex, 1, {id, name, author, score})
+                        this.isDiaShow = false
+                    }).catch(err=>{
+                        console.log(err)
+                    })
+                }else{
+                    alert('请填写全部内容')
                 }
             }
         },
         esec(){
-            console.log(123123)
+            this.score = 0
+            document.getElementById('name').value = ''
+            document.getElementById('author').value = ''
             this.isDiaShow = false
         },
         addBook(){
@@ -133,7 +179,23 @@ export default {
             document.getElementById('author').value = ''
         },
         hideDialog(evt){
-            console.log(evt)
+            // console.log(evt.target.className )
+            if (evt.target.className === 'dialog-container' || evt.target.id === 'cancel') {
+                this.isDiaShow = false
+            }
+        },
+        editBook(index){
+            this.isDiaShow = true
+            this.isEditing = true 
+            this.score = this.books[index].score
+            document.getElementById('name').value = this.books[index].name
+            document.getElementById('author').value = this.books[index].author
+            this.editingId = this.books[index].id
+            this.editingIndex = index
+            // console.log( this.editingId,this.editingIndex)
+        },
+        deleteBook(index){
+            
         }
     }
 }

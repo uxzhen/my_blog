@@ -40,4 +40,6 @@ router.post('/articles/updata/about',checkToken,ArticleController.updataAbout)
 router.post('/read/addread',checkToken,ArticleController.addRead)
 //获取书籍信息
 router.post('/read/getread',checkToken,ArticleController.getRead)
+//更新书籍信息
+router.post('/read/updateread',checkToken,ArticleController.updateRead)
 export default router
