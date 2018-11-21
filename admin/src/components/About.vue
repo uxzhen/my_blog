@@ -4,8 +4,8 @@
         <Aside></Aside>
         <div class="list-container main">
             <h2>
-                文章列表 /
-                <span>ARTICLE LIST</span>
+                关于我 / 
+                <span>ABOUT ME</span>
             </h2>
             <hr>
             <div class="content">
