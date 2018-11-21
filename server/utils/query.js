@@ -10,15 +10,15 @@ let pool
 //并且将数据库文件执行，执行完毕后lzy_blog数据库就有对应的表和数据了
 const init = mysql.createConnection(db)
 init.connect()
-init.query('CREATE DATABASE lzy_blog',err=>{
+init.query('CREATE DATABASE xz_blog',err=>{
     Object.assign(db,dbName)
     //第二次连接数据库，这时候，数据库lzy_blog已经创建成功了，这时候，直接连接lzy_blog数据库
     //然后执行sql文件夹下的lzy_blog.sql文件，对应的表和测试数据就已经存在数据库里面了
     pool = mysql.createPool(db)
     if(err){
-        console.log('lzy_blog database created already')
+        console.log('xz_blog database created already')
     }else{
-        console.log('create lzy_blog Database')
+        console.log('create xz_blog Database')
         query(sqlContent).then(res=>{
             console.log('import sql is success')
         }).catch(err=>{

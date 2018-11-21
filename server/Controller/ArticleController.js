@@ -36,5 +36,13 @@ class ArticleController {
         const res = await Article.updataAbout(content)
         ctx.body = res
     }
+    async addRead(ctx){
+        // console.log(ctx)
+        const {name,author} = await ctx.request.body
+        // console.log(name)
+        // const author = await ctx.request.body.author
+        const res = await Article.addRead(name,author)
+        ctx.body = res
+    }
 }
 export default new ArticleController()

@@ -12,7 +12,7 @@
       </svg>
       <p class="descript">标签</p>
     </router-link>
-    <router-link to="/readinglists" class="link">
+    <router-link to="/readlist" class="link">
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#icon-yuedu"></use>
       </svg>

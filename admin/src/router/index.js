@@ -8,6 +8,8 @@ import Login from '@/components/Login'
 import List from '@/components/List'
 //引入关于页面
 import About from '@/components/About'
+//引入阅读页面
+import readlist from '@/components/ReadList'
 export default new Router({
   routes: [
     {
@@ -21,6 +23,10 @@ export default new Router({
     {
       path:'/about',
       component:About
+    },
+    {
+      path:"/readlist",
+      component:readlist
     },
     {path:'*',redirect:'/login'}
   ]
