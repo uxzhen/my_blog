@@ -72,24 +72,50 @@ export default {
         Aside,
         Star,
     },
+    created(){
+        request({
+            url:"/read/getread",
+            method:"post"
+        }).then(res=>{
+                console.log(res)
+                this.books = res
+                console.log(this.books)
+            }).catch(err=>{
+                console.log(err)
+            })
+    },
     methods:{
-        chooseScore(){
-
+        chooseScore({evt,width}){
+            // console.log(evt,width)
+            const offsetX = evt.offsetX
+            // toFixed返回的是字符串...
+            let score = (parseInt(evt.target.dataset.index, 10) + parseFloat(offsetX / width)).toFixed(2)
+            if (score > 4.9) {
+                score = 5
+            }
+            this.score = score
+            // console.log(this.score)
         },
         // 创建新书
         confirmChange(){
             if(!this.isEditing){
                 const name = document.getElementById('name').value
                 const author = document.querySelector('#author').value
-                console.log(name,author)
+                // console.log(name,author) 
+                const score = this.score
                 if(name&&author){
                     request({
                         url:"/read/addread",
                         method:'post',
                         data:{
                             name,
-                            author
+                            author,
+                            score
                         }
+                    }).then(res=>{
+                        console.log(res)
+                    }).catch(err=>{
+                        console.log(err)
                     })
                 }
             }

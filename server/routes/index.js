@@ -38,4 +38,6 @@ router.post('/articles/about',checkToken,ArticleController.about)
 router.post('/articles/updata/about',checkToken,ArticleController.updataAbout)
 //添加书级
 router.post('/read/addread',checkToken,ArticleController.addRead)
+//获取书籍信息
+router.post('/read/getread',checkToken,ArticleController.getRead)
 export default router

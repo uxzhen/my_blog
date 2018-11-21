@@ -25,8 +25,11 @@ class ArticleModel {
     async updataAbout(content){
         return await query(eacape`UPDATE ABOUT SET content=${content}`)
     }
-    async addRead(name,author){
-        return await query(eacape`INSERT INTO RD_LIST SET name=${name}, author=${author}`)
+    async addRead(name,author,score){
+        return await query(eacape`INSERT INTO RD_LIST SET name=${name}, author=${author},score=${score}`)
+    }
+    async getRead(){
+        return await query(eacape`SELECT * FROM RD_LIST`)
     }
 }
 export default new ArticleModel()
