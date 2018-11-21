@@ -195,7 +195,19 @@ export default {
             // console.log( this.editingId,this.editingIndex)
         },
         deleteBook(index){
-            
+            const id = this.books[index].id
+            // console.log(id)
+            request({
+                url:'/read/delread',
+                method:'post',
+                data:{
+                    id
+                }
+            }).then(res=>{
+                this.books.splice(index,1)
+            }).catch(err=>{
+                console.log(err)
+            })
         }
     }
 }

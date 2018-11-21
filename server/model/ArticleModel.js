@@ -34,5 +34,8 @@ class ArticleModel {
     async updateRead(id,name,author,score){
         return await query(eacape`UPDATE RD_LIST SET name=${name}, author=${author}, score=${score} WHERE id=${id}`)
     }
+    async delRead(id){
+        return await query(eacape`DELETE FROM RD_LIST WHERE id=${id}`)
+    }
 }
 export default new ArticleModel()

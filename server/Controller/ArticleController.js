@@ -55,5 +55,11 @@ class ArticleController {
         const res = await Article.updateRead(id,name,author,score)
         ctx.body = res
     }
+    async delRead(ctx){
+        const id = ctx.request.body.id
+        console.log(id)
+        const res = await Article.delRead(id)
+        ctx.body = res
+    }
 }
 export default new ArticleController()
