@@ -1,5 +1,4 @@
 <template>
-
     <div style="height:100%">
         <head-nav></head-nav>
         <Aside></Aside>
@@ -29,7 +28,7 @@
             </div>
             <editor></editor>
         </main>
-    </div>
+       </div>
     </div>
 </template>
 
@@ -50,7 +49,56 @@ export default {
     data(){
         return{
             tags:[],
-            chosenTags:[]
+            chosenTags:[123,1231],
+
+        }
+    },
+    methods:{
+        getTags(){
+
+        },
+        chooseTag(evt) {
+            if (evt.target.tagName === 'LI') {
+                const value = evt.target.innerHTML
+                if (!evt.target.classList.contains('chosen')) {
+                    this.chosenTags.push(value)
+                }
+                else {
+                    this.chosenTags = this.chosenTags.filter(val => val !== value)
+                }
+                this.$refs.articleList.updateListByTags(this.chosenTags)
+            }},
+        getTags(tags) {
+            this.tags.push(...tags)
+        },
+        changeTag(evt, i) {
+            const oldVal = this.chosenTags[i]
+            const newVal = evt.target.value
+            if (!newVal) {
+                alert('请直接删除Tag!')
+                evt.target.value = oldVal
+                return
+            }
+            const tagIndex = this.tags.indexOf(oldVal)
+            // 获取tags中的index, 使用未修改的tag值
+            if (this.tags.indexOf(newVal) !== -1) {
+                this.chosenTags.splice(i, 1)
+                this.tags.splice(tagIndex, 1)
+            }
+            else {
+                this.chosenTags.splice(i, 1, newVal)
+                this.tags.splice(tagIndex, 1, newVal)
+            }
+            this.$refs.articleList.updateArticleTag(oldVal, newVal, this.chosenTags)
+        },
+        deleteTag(tag, i) {
+            const tagIndex = this.tags.indexOf(tag)
+            // 不再显示该tag
+            this.chosenTags.splice(i, 1)
+            this.tags.splice(tagIndex, 1)
+            this.$refs.articleList.updateListByTags(this.chosenTags)
+            // 删除文章中的tag
+            this.$refs.articleList.deleteArticleTag(tag)
         }
     }
 }
@@ -103,5 +151,8 @@ main {
     height: 100%;
     padding: 0 0.8em 0.5em 0;
     overflow: auto;
+}
+.operate-bar{
+    display: none
 }
 </style>

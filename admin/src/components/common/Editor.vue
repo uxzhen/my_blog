@@ -1,7 +1,7 @@
 <template>
     <div class="editor">
       <input type="text" class="title" id="title" v-model="title" @input="autosave">
-      <div class="operate-bar">
+      <div class="operate-bar" v-show="$route.path === '/list'">
         <section class="tag-container">
           <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-tag"></use>
@@ -41,6 +41,7 @@
           return {
             simplemde:'', //编辑器
             showTags:false,//默认是不显示的
+            aaa:true
           }
         },
         computed:{
