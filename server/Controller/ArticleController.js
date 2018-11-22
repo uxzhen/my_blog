@@ -51,13 +51,13 @@ class ArticleController {
     }
     async updateRead(ctx){
         const { id,name,author,score } = await ctx.request.body
-        console.log( id,name,author,score)
+        // console.log( id,name,author,score)
         const res = await Article.updateRead(id,name,author,score)
         ctx.body = res
     }
     async delRead(ctx){
         const id = ctx.request.body.id
-        console.log(id)
+        // console.log(id)
         const res = await Article.delRead(id)
         ctx.body = res
     }

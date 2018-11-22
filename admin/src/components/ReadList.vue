@@ -147,7 +147,7 @@ export default {
                             score
                         }
                     }).then(res=>{
-                        console.log(res)
+                        // console.log(res)
                         const id = res.insertId
                             const book = {
                                 id,
