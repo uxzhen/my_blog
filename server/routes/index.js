@@ -44,4 +44,7 @@ router.post('/read/getread',checkToken,ArticleController.getRead)
 router.post('/read/updateread',checkToken,ArticleController.updateRead)
 //删除书籍
 router.post('/read/delread',checkToken,ArticleController.delRead)
+
+//前端请求
+router.post('/read/aaa',ArticleController.getArticles)
 export default router

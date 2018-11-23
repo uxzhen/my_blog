@@ -27,11 +27,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.dog{
-  position: absolute;
-  right: 100px;
-  top: 150px;
-}
   ul li{
     list-style: none;
     display: inline-block;
@@ -43,9 +38,9 @@ export default {
     color: rgb(163, 154, 154);
   }
   ul li:hover{
-    background:#5c5c57;
-    color: rgb(222, 224, 217);
-    border-top: 2px solid rgb(123, 124, 122);
+    background:#00000083;
+    color: rgb(224, 224, 217);
+    border-top: 2px solid rgb(83, 84, 180);
     margin-top: -2px;
   }
   ul{

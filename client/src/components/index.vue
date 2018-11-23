@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="right">
-      
+      <Right-list></Right-list>
     </div>
   </main>
 </div>
@@ -24,6 +24,7 @@
 <script>
 import Banner from '@/components/common/Banner'
 import Carousel from '@/components/common/Carousel'
+import RightList from '@/components/common/RightList'
 export default {
   name: 'index',
   data () {
@@ -32,14 +33,20 @@ export default {
   },
   components:{
     Banner,
-    Carousel
+    Carousel,
+    RightList
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.right{
+  display: inline-block;
+  width: 38%;
+  border: 1px solid red;
+  height: 280px;
+}
 main{
   width: 1000px;
   margin: 0 auto;
@@ -62,9 +69,13 @@ main{
 }
 .aboutme1{
  height: 120px;
- border: 1px #db9091 solid;
+ border: 1px #cad84e solid;
  padding: 8px 8px;
  background: #fffff7;
+}
+.aboutme1 p{
+ line-height: 20px;
+ margin-top: 10px;
 }
 .aboutme1:nth-child(2){
   
