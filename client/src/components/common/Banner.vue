@@ -1,10 +1,8 @@
 <template>
 <div style="heiht:100%">
-  <img src="../../assets/img/b2.jpg" style="width:100%">
+  <img src="../../assets/img/2.jpg" style="width:100%">
    <div class="dd">
-     
         <ul>
-          
             <router-link to="/lists" class="link"><li>首页</li></router-link>
             <router-link to="/lists" class="link"><li>心情随笔</li></router-link>
             <router-link to="/lists" class="link"><li>韵华追忆</li></router-link>
@@ -21,12 +19,19 @@ export default {
   data () {
     return {
     }
+  },
+    components:{
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.dog{
+  position: absolute;
+  right: 100px;
+  top: 150px;
+}
   ul li{
     list-style: none;
     display: inline-block;
@@ -35,16 +40,20 @@ export default {
     padding: 0;
     line-height: 50px;
     text-align: center;
-    color: #000;
+    color: rgb(163, 154, 154);
   }
   ul li:hover{
-    background: rgb(94, 157, 120);
+    background:#5c5c57;
+    color: rgb(222, 224, 217);
+    border-top: 2px solid rgb(123, 124, 122);
+    margin-top: -2px;
   }
   ul{
     list-style: none;
     width: 888px;
     margin: 0 auto;
-    background: rgb(94, 157, 190);
+    /* background: rgb(94, 157, 190); */
+    background: rgb(51, 51, 51);
     padding: 0px;
     /* height: 50px; */
   }
@@ -53,6 +62,6 @@ export default {
     min-width: 888px;
     margin-top: -5px;
     padding: 0;
-    background: rgb(94, 157, 190);
+    background: rgb(51, 51, 51);
     }
 </style>
