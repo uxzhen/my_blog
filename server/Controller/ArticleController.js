@@ -61,5 +61,16 @@ class ArticleController {
         const res = await Article.delRead(id)
         ctx.body = res
     }
+    async getMessage(ctx){
+        const res = await Article.getMessage()
+        ctx.body = res
+    } 
+    async upmessage(ctx){
+        const date = new Date()
+        // console.log(data)
+        const {username,checkPass,age} = await ctx.request.body
+        const res = await Article.upmessage(username,checkPass,age,date)
+        ctx.body = res
+    }  
 }
 export default new ArticleController()

@@ -77,20 +77,22 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .lists{
-  background: #ecece6;
+  background: #eee8e8;
   margin-top: 5px;
   height: 150px;
-  border-bottom: 2px solid rgb(184, 190, 223);
+  border-bottom: 2px solid rgb(18, 141, 163);
+  position: relative;
 }
 .main-a{
     /* height:50px; */
 }
 .right{
   display: inline-block;
-  width: 30%;
+  width: 25%;
   /* border: 1px solid red; */
   height: 520px;
   overflow: hidden;
+  margin-left: 1%;
 }
 .left{
   display: inline-block;
@@ -99,6 +101,7 @@ export default {
   padding: 15px;
   padding-left: 5px;
   background: #fffff700;
+  height: 1290px;
 }
 main{
   width: 1250px;
@@ -140,7 +143,7 @@ main{
 }
 .aboutme p{
   font-size: 12px;
-  color: #aaa
+  color: rgb(144, 115, 115)
 }
 li{
   display: inline-block;
@@ -161,6 +164,8 @@ li{
   font-size: 10px;
   color: #666;
   padding: 8px;
+  position: absolute;
+  bottom: 0px;
 }
 .lists-h1{
   font-size: 25px;

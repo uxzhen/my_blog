@@ -45,6 +45,10 @@ router.post('/read/updateread',checkToken,ArticleController.updateRead)
 //删除书籍
 router.post('/read/delread',checkToken,ArticleController.delRead)
 
-//前端请求
+//前端请求文章
 router.post('/read/news',ArticleController.getArticles)
+//前端请求功能
+router.post('/message/getmessage',ArticleController.getMessage)
+//前端添加留言功能
+router.post('/message/upmessage',ArticleController.upmessage)
 export default router

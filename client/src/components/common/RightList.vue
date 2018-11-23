@@ -30,7 +30,7 @@ export default {
         }).then(res=>{
                 // console.log(res)
                 this.news = res.data
-                for(let i=0;i<3;i++){
+                for(let i=0;i<this.news.length;i++){
                     this.news[i].createTime = moment(this.news[i].createTime).format('YYYY-MM-DD HH:mm:ss')
                 }
             }).catch(err=>{

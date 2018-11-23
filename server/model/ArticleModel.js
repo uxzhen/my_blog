@@ -37,5 +37,11 @@ class ArticleModel {
     async delRead(id){
         return await query(eacape`DELETE FROM RD_LIST WHERE id=${id}`)
     }
+    async getMessage(){
+        return await query(eacape`SELECT * FROM MESSAGE ORDER BY time DESC`)
+    }
+    async upmessage(username,checkPass,age,date){
+        return await query(eacape`INSERT INTO MESSAGE SET username=${username},message=${checkPass},qq=${age},time=${date}`)
+    }
 }
 export default new ArticleModel()
