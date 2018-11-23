@@ -32,7 +32,7 @@
                     <th>评分</th>
                     <th>编辑/删除</th>
                 </tr>
-                <tr v-for="{ name, author, score },index in books">
+                <tr v-for="({ name, author, score },index) in books" :key="index">
                     <td class="col-1">{{ name }}</td>
                     <td class="col-2">{{ author }}</td>
                     <td class="col-3">

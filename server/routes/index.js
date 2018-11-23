@@ -46,5 +46,5 @@ router.post('/read/updateread',checkToken,ArticleController.updateRead)
 router.post('/read/delread',checkToken,ArticleController.delRead)
 
 //前端请求
-router.post('/read/aaa',ArticleController.getArticles)
+router.post('/read/news',ArticleController.getArticles)
 export default router

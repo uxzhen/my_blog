@@ -3,7 +3,7 @@
   <img src="../../assets/img/2.jpg" style="width:100%">
    <div class="dd">
         <ul>
-            <router-link to="/lists" class="link"><li>首页</li></router-link>
+            <router-link to="/" class="link"><li>首页</li></router-link>
             <router-link to="/lists" class="link"><li>心情随笔</li></router-link>
             <router-link to="/lists" class="link"><li>韵华追忆</li></router-link>
             <router-link to="/lists" class="link"><li>技术分享</li></router-link>
