@@ -51,4 +51,6 @@ router.post('/read/news',ArticleController.getArticles)
 router.post('/message/getmessage',ArticleController.getMessage)
 //前端添加留言功能
 router.post('/message/upmessage',ArticleController.upmessage)
+//前端获取图书
+router.post('/read/getbook',ArticleController.getRead)
 export default router

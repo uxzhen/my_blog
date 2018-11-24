@@ -5,6 +5,7 @@ import books from '@/components/Books'
 import message from '@/components/Message'
 import share from '@/components/Share'
 import about from '@/components/About'
+import moon from '@/components/Moon'
 Vue.use(Router)
 
 export default new Router({
@@ -33,6 +34,11 @@ export default new Router({
       path:'/about',
       name:"about",
       component:about
+    },
+    {
+      path:'/moon',
+      name:'moon',
+      component:moon
     },
     {
       path:'/',

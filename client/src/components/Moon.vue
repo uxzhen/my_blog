@@ -1,3 +1,4 @@
+
 <template>
     <div style="heiht:100%;background:#f4f4f4c2;overflow: hidden;">
         <Banner></Banner>
@@ -7,7 +8,7 @@
 <script>
 import Banner from '@/components/common/Banner'
 export default {
-    name:"about",
+    name:"moon",
      components:{
     Banner
   },

@@ -4,9 +4,10 @@
    <div class="dd">
         <ul>
             <router-link to="/index"><li>首页</li></router-link>
-            <router-link to="/books"><li>心情随笔</li></router-link>
+            <router-link to="/moon"><li>心情随笔</li></router-link>
             <router-link to="/share"><li>技术分享</li></router-link>
             <router-link to="/message"><li>小留言板</li></router-link>
+            <router-link to="/books"><li>书籍推荐</li></router-link>
             <router-link to="/about"><li>个人归档</li></router-link>
         </ul>
     </div>
@@ -37,7 +38,7 @@ export default {
   ul li{
     list-style: none;
     display: inline-block;
-    width: 170px;
+    width: 150px;
     margin: 0;
     padding: 0;
     line-height: 50px;
@@ -58,7 +59,7 @@ export default {
   }
   ul{
     list-style: none;
-    width: 888px;
+    width: 1000px;
     margin: 0 auto;
     /* background: rgb(94, 157, 190); */
     background: rgb(51, 51, 51);
