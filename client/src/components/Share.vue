@@ -1,9 +1,10 @@
 <template>
-<div style="heiht:100%;background:#f4f4f4c2;overflow: hidden;">
+<div class="main-top" style="heiht:100%;overflow: hidden;">
   <Banner></Banner>
-    <!-- 技术分享 -->
+  
   <main>
     <div class="Carousel">
+
         <div class="left">
           <p class="lists-h1">最新文章</p>
           <div class="lists-list"></div>
@@ -17,6 +18,7 @@
         </div>
         </div>
     </div>
+   
 
     <div class="right">
       <Right-list></Right-list>
@@ -63,25 +65,37 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.Carousel-a{
+  -moz-box-shadow:0px 0px 5px #333333; -webkit-box-shadow:0px 0px 5px #333333; box-shadow:0px 0px 5px #333333;
+  border-radius: 5px;
+}
+.main-top{
+background:#ffffff52;
+
+}
 .lists{
-  background: #eee8e8;
+  background: #ffffff;
   margin-top: 5px;
   height: 150px;
   border-bottom: 2px solid rgb(18, 141, 163);
   position: relative;
+  -moz-box-shadow:0px 0px 5px #333333; -webkit-box-shadow:0px 0px 5px #333333; box-shadow:0px 0px 5px #333333;
+  border-radius: 5px;
 }
 .main-a{
     /* height:50px; */
 }
 .right{
-    float: left;
   display: inline-block;
   width: 25%;
   /* border: 1px solid red; */
   height: 520px;
   overflow: hidden;
   margin-left: 1%;
-  margin-top: 5px;
+  /* position: fixed; */
+   -moz-box-shadow:0px 0px 5px #333333; -webkit-box-shadow:0px 0px 5px #333333; box-shadow:0px 0px 5px #333333;
+  border-radius: 5px;
+  margin-top: 50px;
 }
 .left{
   display: inline-block;
@@ -90,30 +104,36 @@ export default {
   padding: 15px;
   padding-left: 5px;
   background: #fffff700;
-  /* height: 1290px; */
+  height: 1290px;
 }
 main{
-  width: 1250px;
+  width: 1000px;
   margin: 0 auto;
-  overflow: hidden;
 }
 .Carousel{
-    
+  
+  display: inline-block;
   width: 70%;
+  float: left;
 }
 .aboutme{
   float: left;
   display: inline-block;
-  width: 20%;
+  width: 19%;
   height: 250px;
   background: #fffff7;
   /* margin: 5px 5px; */
+  border-radius: 5px;
+  
 }
 .aboutme1{
  height: 120px;
  border: 1px #cad84e solid;
  padding: 8px 8px;
+ margin-left: 5px;
  background: #fffff7;
+ -moz-box-shadow:0px 0px 5px #333333; -webkit-box-shadow:0px 0px 5px #333333; box-shadow:0px 0px 5px #333333;
+  border-radius: 5px;
 }
 .aboutme1 p{
  line-height: 20px;
@@ -124,7 +144,9 @@ main{
   background: #fafcfd;
   border: 1px solid #cceff5;
   /* border-top: none; */
-  margin-top: 4px
+  margin-top: 4px;
+  -moz-box-shadow:0px 0px 5px #333333; -webkit-box-shadow:0px 0px 5px #333333; box-shadow:0px 0px 5px #333333;
+  border-radius: 5px;
 }
 .aboutme h3{
   font-size: 25px;
@@ -138,10 +160,13 @@ li{
   display: inline-block;
   list-style: none;
   color: rgb(65, 71, 109);
+  color: #444444;
+  font-weight: 800;
 }
 .lists-p{
-  font-size: 15px;
-  color: #000;
+  font-size: 14px;
+    line-height: 2;
+    color: #555;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
@@ -158,6 +183,8 @@ li{
 }
 .lists-h1{
   font-size: 25px;
+  color: #444444;
+  font-weight: 500;
 }
 .lists-list{
   height: 2px;

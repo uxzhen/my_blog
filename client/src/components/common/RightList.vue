@@ -49,7 +49,7 @@ h2{
     color: #222;
 }
 .main{
-    background: #fffff7;
+    background: #ffffff;
     padding: 10px;
 }
 .main-a{
