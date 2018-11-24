@@ -47,7 +47,7 @@ router.post('/read/delread',checkToken,ArticleController.delRead)
 
 //前端请求文章
 router.post('/read/news',ArticleController.getArticles)
-//前端请求功能
+//前端请求留言功能
 router.post('/message/getmessage',ArticleController.getMessage)
 //前端添加留言功能
 router.post('/message/upmessage',ArticleController.upmessage)

@@ -174,7 +174,7 @@ main {
   border-radius: 10px;
   margin: 0 auto;
   position: fixed;
-  left: 40%;
+  left: 27%;
   background: #fff;
   padding: 20px;
   -moz-box-shadow:0px 0px 5px #333333; -webkit-box-shadow:0px 0px 5px #333333; box-shadow:0px 0px 5px #333333;
