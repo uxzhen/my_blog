@@ -18,7 +18,7 @@
         </div>
         </div>
     </div>
-   
+    
 
     <div class="right">
       <Right-list></Right-list>
