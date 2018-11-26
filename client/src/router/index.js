@@ -6,6 +6,7 @@ import message from '@/components/Message'
 import share from '@/components/Share'
 import about from '@/components/About'
 import moon from '@/components/Moon'
+import news from '@/components/news'
 Vue.use(Router)
 
 export default new Router({
@@ -24,6 +25,10 @@ export default new Router({
       path:'/message',
       name:'message',
       component:message
+    },
+    {
+      path:'/news/:id',
+      component:news
     },
     {
       path:'/share',

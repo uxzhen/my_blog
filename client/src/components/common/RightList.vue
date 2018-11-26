@@ -2,9 +2,9 @@
     <div class="main">
         <h2>最新动态</h2>
         <div class="main-list"></div>
-        <div v-for="({title,createTime,content},index) in news" :key="index">
-            <ul class="main-a">
-                <router-link to="/lists" class="link"><li>{{title}}</li></router-link>
+        <div  v-for="({title,createTime,content,id},index) in news" :key="index">
+            <ul   class="main-a">
+                <router-link :to="'/news/' +id" >{{title}}</router-link>
                 <p>{{content}}</p>
                 <span> {{createTime}}</span>
             </ul>
@@ -20,7 +20,7 @@ export default {
     name:"RightList",
     data(){
         return{
-            news:[]
+            news:[],
         }
     },
     created(){
@@ -33,10 +33,11 @@ export default {
                 for(let i=0;i<this.news.length;i++){
                     this.news[i].createTime = moment(this.news[i].createTime).format('YYYY-MM-DD HH:mm:ss')
                 }
+                
             }).catch(err=>{
                 console.log(err)
             })
-    }
+    },
 }
 </script>
 

@@ -53,4 +53,6 @@ router.post('/message/getmessage',ArticleController.getMessage)
 router.post('/message/upmessage',ArticleController.upmessage)
 //前端获取图书
 router.post('/read/getbook',ArticleController.getRead)
+//单独查看
+router.post('/news/:id',ArticleController.getOneArticle)
 export default router

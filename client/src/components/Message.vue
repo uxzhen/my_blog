@@ -1,6 +1,6 @@
 <template>
-    <div style="heiht:100%;background:#f4f4f4c2;overflow: hidden;  text-align: center;">
-        <Banner></Banner>
+    <div style="height:100%;background:#f4f4f4c2;overflow: hidden;  text-align: center;">
+        <Banner style="text-align: left;"></Banner>
           
             <main>
                 

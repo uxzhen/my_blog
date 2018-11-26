@@ -8,9 +8,9 @@
         <div class="left">
           <p class="lists-h1">最新文章</p>
           <div class="lists-list"></div>
-          <div class="lists" v-for="({title,createTime,content},index) in news" :key="index">
+          <div class="lists" v-for="({title,createTime,content,id},index) in news" :key="index">
             <ul class="main-a">
-                <router-link to="/lists" class="link"><li>{{title}}</li></router-link>
+                <router-link :to="'/news/' + id" class="link"><li>{{title}}</li></router-link>
                 <p class="lists-p">{{content}}</p>
                 <span class="lists-span"> {{createTime}}</span>
             </ul>

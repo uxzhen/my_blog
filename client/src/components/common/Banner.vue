@@ -4,7 +4,7 @@
    <div class="dd">
         <ul>
             <router-link to="/index"><li>首页</li></router-link>
-            <router-link to="/moon"><li>心情随笔</li></router-link>
+            <!-- <router-link to="/moon"><li>心情随笔</li></router-link> -->
             <router-link to="/share"><li>技术分享</li></router-link>
             <router-link to="/message"><li>小留言板</li></router-link>
             <router-link to="/books"><li>书籍推荐</li></router-link>
@@ -72,5 +72,6 @@ export default {
     margin-top: -5px;
     padding: 0;
     background: rgb(51, 51, 51);
+    text-align: center;
     }
 </style>
